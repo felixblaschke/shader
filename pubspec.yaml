@@ -1,6 +1,6 @@
 name: shader
 description: Provides a simple way to access shaders in Flutter.
-version: 0.0.1
+version: 0.0.1+1
 homepage: https://github.com/felixblaschke/shader
 
 environment:
