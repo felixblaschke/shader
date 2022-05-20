@@ -3,6 +3,8 @@
 
 Adds remote compilation to your Flutter application to test fragment shaders.
 
+![flutter logo with glowing ring](doc_files/ring.gif)
+
 <!-- #toc -->
 ## Table of Contents
 
