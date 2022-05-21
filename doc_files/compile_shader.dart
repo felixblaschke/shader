@@ -18,7 +18,7 @@ class ScreenUsingShader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: GlslFragmentProgramBuilder(
+        child: GlslFragmentProgramWebserviceBuilder(
           // GLSL shader code
           code: '''
 #version 320 es

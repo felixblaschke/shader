@@ -8,13 +8,13 @@ import 'package:shader/shaderc_webservice/compile_glsl_fragment_shader.dart';
 /// proposes. Don't use it for productive apps.
 ///
 /// Make sure to permit web request on your target platform.
-class GlslFragmentProgramBuilder extends StatefulWidget {
+class GlslFragmentProgramWebserviceBuilder extends StatefulWidget {
   final String code;
   final Widget Function(BuildContext context, FragmentProgram? shaderProgram)
       builder;
   final String shadercWebserviceBaseUrl;
 
-  const GlslFragmentProgramBuilder({
+  const GlslFragmentProgramWebserviceBuilder({
     /// GLSL code
     required this.code,
 
@@ -28,12 +28,12 @@ class GlslFragmentProgramBuilder extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<GlslFragmentProgramBuilder> createState() =>
-      _GlslFragmentProgramBuilderState();
+  State<GlslFragmentProgramWebserviceBuilder> createState() =>
+      _GlslFragmentProgramWebserviceBuilderState();
 }
 
-class _GlslFragmentProgramBuilderState
-    extends State<GlslFragmentProgramBuilder> {
+class _GlslFragmentProgramWebserviceBuilderState
+    extends State<GlslFragmentProgramWebserviceBuilder> {
   FragmentProgram? shaderProgram;
 
   @override
@@ -43,7 +43,8 @@ class _GlslFragmentProgramBuilderState
   }
 
   @override
-  void didUpdateWidget(covariant GlslFragmentProgramBuilder oldWidget) {
+  void didUpdateWidget(
+      covariant GlslFragmentProgramWebserviceBuilder oldWidget) {
     if (oldWidget.code != widget.code) {
       _compileShader();
     }

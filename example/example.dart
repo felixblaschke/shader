@@ -14,7 +14,7 @@ class ScreenUsingShader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GlslFragmentProgramBuilder(
+      body: GlslFragmentProgramWebserviceBuilder(
         code: '''
 #version 320 es
 

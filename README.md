@@ -5,6 +5,8 @@ Adds remote compilation to your Flutter application to test fragment shaders.
 
 ![flutter logo with glowing ring](https://github.com/felixblaschke/shader/raw/main/doc_files/ring.gif)
 
+By default it uses a server hosted by me. But you can also setup a compilation webservice yourself: [https://github.com/felixblaschke/shaderc_webservice](https://github.com/felixblaschke/shaderc_webservice)
+
 <!-- #toc -->
 ## Table of Contents
 
@@ -18,7 +20,9 @@ Adds remote compilation to your Flutter application to test fragment shaders.
 
 ## Usage
 
-Use the `GlslFragmentProgramBuilder` widget to get your shader compiled.
+Use the `GlslFragmentProgramWebserviceBuilder` widget to get your shader compiled.
+
+**Note:** *Keep in mind that this widget uses a webservice to compile the GLSL code on-demand and therefore shouldn't be used for serious production apps.*
 
 ### Quick example
 
@@ -31,7 +35,7 @@ class ScreenUsingShader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: GlslFragmentProgramBuilder(
+        child: GlslFragmentProgramWebserviceBuilder(
           // GLSL shader code
           code: '''
 #version 320 es
@@ -80,7 +84,7 @@ class ScreenUsingShader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GlslFragmentProgramBuilder(
+      body: GlslFragmentProgramWebserviceBuilder(
         code: '''
 #version 320 es
 
@@ -162,7 +166,7 @@ class ScreenUsingShader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GlslFragmentProgramBuilder(
+      body: GlslFragmentProgramWebserviceBuilder(
         code: '''
 #version 320 es
 // based on: https://www.shadertoy.com/view/XdlSDs
