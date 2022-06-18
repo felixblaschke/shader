@@ -1,8 +1,3 @@
-## 0.0.2
-
-- `GlslFragmentProgramBuilder` renamed to `GlslFragmentProgramWebserviceBuilder` to emphasize the dependency on a web service.
-- Improved docs
-
 ## 0.0.1
 
-- Initial release
+- Initial version.
