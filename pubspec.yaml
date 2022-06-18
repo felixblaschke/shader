@@ -1,6 +1,6 @@
 name: shader
 description: Command-line application for compiling GLSL shaders into Flutter-compatible SPR-V byte code.
-version: 0.0.2
+version: 1.0.0
 homepage: https://github.com/felixblaschke/shader
 
 environment:
@@ -15,7 +15,6 @@ dependencies:
 
 dev_dependencies:
   lints: ^2.0.0
-  test: ^1.16.0
 
 executables:
   shader: shader
