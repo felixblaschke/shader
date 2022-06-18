@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Fix in documentation
+
 ## 1.0.0
 
 - Complete overhaul of shader compilation approach
