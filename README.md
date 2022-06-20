@@ -1,5 +1,5 @@
 <!-- This file uses generated code. Visit https://pub.dev/packages/readme_helper for usage information. -->
-<!-- #include doc/title.md -->
+
 # shader
 
 Shader manages the **compilation** of your GLSL shaders into SPIR-V byte code and Dart code.
@@ -16,27 +16,28 @@ shader --use-remote --to-dart
 # Discover all features
 shader --help
 ```
-<!-- // end of #include -->
 
 <!-- #toc -->
+
 ## Table of Contents
 
 [**Getting started**](#getting-started)
 
 [**Usage**](#usage)
-  - [Compile to Dart](#compile-to-dart)
-  - [Use of uniforms](#use-of-uniforms)
-  - [Make use of sampler uniform](#make-use-of-sampler-uniform)
-  - [Use a local compiler](#use-a-local-compiler)
-  - [Improve development cycle](#improve-development-cycle)
-  - [Other features](#other-features)
+
+- [Compile to Dart](#compile-to-dart)
+- [Use of uniforms](#use-of-uniforms)
+- [Make use of sampler uniform](#make-use-of-sampler-uniform)
+- [Use a local compiler](#use-a-local-compiler)
+- [Improve development cycle](#improve-development-cycle)
+- [Other features](#other-features)
 
 [**Writing shaders**](#writing-shaders)
-  - [Constraints in Flutter](#constraints-in-flutter)
-  - [Learning GLSL](#learning-glsl)
+
+- [Constraints in Flutter](#constraints-in-flutter)
+- [Learning GLSL](#learning-glsl)
 <!-- // end of #toc -->
 
-<!-- #include doc/setup.md -->
 ## Getting started
 
 Install the command-line executable `shader` for your current user:
@@ -56,10 +57,6 @@ shader --help
 ```
 dart pub global run shader --help
 ```
-
-<!-- // end of #include -->
-
-<!-- #include doc/usage.md -->
 
 ## Usage
 
@@ -257,9 +254,6 @@ The `shader` executable also supports some other options and output format. Type
 shader --help
 ```
 
-<!-- // end of #include -->
-
-<!-- #include doc/writing-shader.md -->
 ## Writing shaders
 
 This section covers useful information and resources writing own shader code.
@@ -268,7 +262,7 @@ This section covers useful information and resources writing own shader code.
 
 Shaders are not supported for Flutter web, yet. But there is a [project plan](https://github.com/flutter/flutter/projects/207) for the Flutter engine developers to enable it.
 
-Also the capabilities of GLSL language feature are restricted. Take a look at the [specifications of the SPIR-V Transpiler](https://github.com/flutter/engine/tree/master/lib/spirv). 
+Also the capabilities of GLSL language feature are restricted. Take a look at the [specifications of the SPIR-V Transpiler](https://github.com/flutter/engine/tree/master/lib/spirv).
 
 This package compiles GLSL code to SPIR-V code, and at runtime SPIR-V transpiler converts it to native API (e.g. OpenGL, Vulkan). So it might be that `shader` will compile fine, but it fails at runtime.
 
@@ -280,5 +274,3 @@ There are various sources to learn GLSL:
 - https://thebookofshaders.com/
 - https://www.shadertoy.com/
 - [https://www.reddit.com/.../best_place_to_start_learning_glsl/](https://www.reddit.com/r/shaders/comments/gu2yd9/best_place_to_start_learning_glsl/)
-
-<!-- // end of #include -->
